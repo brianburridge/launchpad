@@ -1,13 +1,13 @@
-rm "public/index.html"
-rm "public/favicon.ico"
+run "rm public/index.html"
+run "rm public/favicon.ico"
 
 # Don't use prototype
-rm "public/javascripts/prototype.js"
-rm "public/javascripts/effects.js"
-rm "public/javascripts/dragdrop.js"
-rm "public/javascripts/controls.js"
-rm "public/javascripts/application.js"
+run "rm public/javascripts/prototype.js"
+run "rm public/javascripts/effects.js"
+run "rm public/javascripts/dragdrop.js"
+run "rm public/javascripts/controls.js"
+run "rm public/javascripts/application.js"
 
-rm "public/images/rails.png"
+run "rm public/images/rails.png"
 
  
