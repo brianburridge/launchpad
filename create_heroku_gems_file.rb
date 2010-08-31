@@ -1,7 +1,7 @@
 # This rake task comes from http://madeofcode.com/posts/46-generate-gem-yml-and-gems-for-rails
 
-rakefile("gems_specify.rake") do <<-TASK
-  namespace :gems do
+file "lib/gems_specify.rake",
+%q{namespace :gems do
     desc "Spit out gems.yml and .gems in root of app (for Heroku + EY etc.)"
     task :specify => :environment do
       gems = Rails.configuration.gems
@@ -33,7 +33,6 @@ rakefile("gems_specify.rake") do <<-TASK
       end
     end
   end
-  TASK
-end
+}
 
 rake("gems:specify")
