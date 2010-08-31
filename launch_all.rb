@@ -1,4 +1,5 @@
 load_template "http://github.com/bburridge/launchpad/raw/master/setup_db.rb"
 load_template "http://github.com/bburridge/launchpad/raw/master/headstart.rb"
 load_template "http://github.com/bburridge/launchpad/raw/master/cleanup.rb"
+load_template "http://github.com/bburridge/launchpad/raw/master/create_heroku_gems_file.rb"
 load_template "http://github.com/bburridge/launchpad/raw/master/git_setup.rb"
