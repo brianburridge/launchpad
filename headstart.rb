@@ -1,4 +1,4 @@
-gem "cops"
+gem "cops", :version => '0.2.0.7', :lib => 'blue_light_special'
 
 generate :blue_light_special
 
