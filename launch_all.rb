@@ -1,4 +1,4 @@
-load_template "setup_db.rb"
-load_template "headstart.rb"
-load_template "cleanup.rb"
-load_template "git_setup.rb"
+load_template "http://github.com/bburridge/launchpad/raw/master/setup_db.rb"
+load_template "http://github.com/bburridge/launchpad/raw/master/headstart.rb"
+load_template "http://github.com/bburridge/launchpad/raw/master/cleanup.rb"
+load_template "http://github.com/bburridge/launchpad/raw/master/git_setup.rb"
