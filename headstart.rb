@@ -20,7 +20,7 @@ contents = ""
 File.open(source_file, 'r') do |f1|  
    while line = f1.gets
      if line.include?("$")
-       line.gsub!(/\$delayed_job/, delayed_job) if !line.nil? && !delayed_job.nil?
+       line.gsub!(/\$delayed_job/, delayed_job.to_s) if !line.nil?
      end
      contents += line  
    end  
