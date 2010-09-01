@@ -16,6 +16,7 @@ end
 
 source_file = File.expand_path(File.dirname(__FILE__)) + "/config/blue_light_special.yml"
 
+contents = ""
 File.open(source_file, 'r') do |f1|  
    while line = f1.gets
      if line.include?("$")
