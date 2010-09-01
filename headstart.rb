@@ -9,7 +9,26 @@ generate :blue_light_special
 
 if yes?("Do you want to use Delayed Job?")
   generate :delayed_job
+  delayed_job = true
+else
+  delayed_job = false
 end
+
+source_file = File.expand_path(File.dirname(__FILE__)) + "/config/blue_light_special.yml"
+
+File.open(source_file, 'r') do |f1|  
+   while line = f1.gets
+     if line.include?("$")
+       line.gsub!(/\$delayed_job/, delayed_job) if !line.nil? && !delayed_job.nil?
+     end
+     contents += line  
+   end  
+end
+
+File.open('config/blue_light_special.yml', 'w') do |f2|   
+ f2.puts contents
+end
+
 
 rake("db:migrate")
 
