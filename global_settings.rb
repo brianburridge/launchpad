@@ -3,7 +3,7 @@ if yes?("Do you want global settings?")
 
   generate(:settings_migration)
 
-  rake(:db:migrate)
+  rake("db:migrate")
 
 
   file "config/initializers/global_settings.rb", <<-END
