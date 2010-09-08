@@ -13,10 +13,10 @@ title = current_app_name if title.blank?
 description = ask("Web app description (used on home page)?")
 
 file "config/initializers/global_settings.rb", <<-END
-# Place global settings here like
+ # Place global settings here like
  Settings.page_limit = 10 if Settings.page_limit.nil?
- Settings.title = #{title} if Settings.#{title}.nil?
- Settings.description = #{description} if Settings.#{description}.nil?
+ Settings.title = "#{title}" if Settings.title.nil?
+ Settings.description = "#{description}" if Settings.description.nil?
 END
 
 end
