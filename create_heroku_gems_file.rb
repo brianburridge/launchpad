@@ -29,6 +29,7 @@ file "lib/tasks/gems_specify.rake",
           spec << " --source #{gem.source}" if gem.source
           output << spec
         end
+        output << "rails --version 2.3.8"
         f.write output.join("\n")
         puts output.join("\n")
       end
