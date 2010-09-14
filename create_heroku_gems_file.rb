@@ -15,7 +15,8 @@ file "lib/tasks/gems_specify.rake",
           spec["install_options"] = "--source #{gem.source}" if gem.source
           output << spec
         end
-        output << "rails --version 2.3.8"
+        output << "- name: rails"
+        output << "  version: = 2.3.8"
         f.write output.to_yaml
         puts output.to_yaml
       end
