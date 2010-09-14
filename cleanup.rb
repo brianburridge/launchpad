@@ -1,5 +1,4 @@
 run "rm public/index.html"
-run "rm public/favicon.ico"
 
 # Don't use prototype
 run "rm public/javascripts/prototype.js"

@@ -1,9 +1,7 @@
 gem "headstart", :version => '0.2.0'
-gem 'formtastic'
-gem 'will_paginate'
-# must use paperclip 2.3.0 at this point due to conflict between aws-s3 (needed by paperclip 2.3.1 and right_aws needed by backup_fu plugin)
-gem 'paperclip', :version => '2.3.0'
-gem 'right_aws'
+gem 'formtastic', :version => '0.9.7'
+gem 'will_paginate',, :version => '2.2.2'
+
   
 generate :headstart
 
