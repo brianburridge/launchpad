@@ -28,11 +28,14 @@ if yes?("Do you want to deploy to heroku?")
         File.open(dot_gems, "w") do |f|
           output = []
           gems.each do |gem|
-            spec = "#{gem.name} --version '#{gem.version_requirements.to_s}'"
-            spec << " --source #{gem.source}" if gem.source
-            output << spec
+            if !gem.name.include?('formtastic')
+              spec = "#{gem.name} --version '#{gem.version_requirements.to_s}'"
+              spec << " --source #{gem.source}" if gem.source
+              output << spec
+            end
           end
           output << "rails --version 2.3.8"
+          output << "formtastic --version '0.9.7' --ignore-dependencies"
           f.write output.join("\n")
           puts output.join("\n")
         end
