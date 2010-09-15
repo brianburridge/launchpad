@@ -1,0 +1,15 @@
+
+embed_assets: off
+
+javascripts:
+  workspace:
+    - public/javascripts/application.js
+    - public/javascripts/modernizr-1.5.min.js
+
+stylesheets:
+  workspace:
+    - public/stylesheets/layout.css
+    - public/stylesheets/report.css
+    - public/stylesheets/reset.css
+    - public/stylesheets/style.css
+    - public/stylesheets/text.css
