@@ -2,7 +2,22 @@ gem "headstart", :version => '0.3.0'
 gem 'formtastic', :version => '0.9.7'
 gem 'will_paginate', :version => '2.2.2'
 
-  
+run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/ostruct_sql_query.rb > lib/ostruct_sql_query.rb'
+run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/email_validation.rb > lib/email_validation.rb'
+run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/url_validation.rb > lib/url_validation.rb'
+run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/formtastic_datepicker.rb > lib/formtastic_datepicker.rb'
+run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/initializers/requires.rb > config/initializers/requires.rb'
+
+# Set up session store initializer
+=begin
+initializer 'requires.rb', <<-END
+require 'formtastic_datepicker'
+require 'ostruct_sql_query'
+require 'email_validation'
+require 'url_validation'
+END
+=end
+
 generate :headstart
 
 if yes?("Do you want to use Delayed Job?")
