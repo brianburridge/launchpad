@@ -1,11 +1,10 @@
 current_app_name = Dir.pwd.split("/").last
 
-if yes?("Do you want global settings?")
-  gem "rails-settings", :lib => 'settings'
+gem "rails-settings", :lib => 'settings'
 
-  generate(:settings_migration)
+generate(:settings_migration)
 
-  rake("db:migrate")
+rake("db:migrate")
 
 title = ask("Web app title? [#{current_app_name}]")
 title = current_app_name if title.blank?
@@ -21,4 +20,3 @@ if  ActiveRecord::Base.connection.tables.include?('settings')
 end
 END
 
-end
