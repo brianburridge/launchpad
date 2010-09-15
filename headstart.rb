@@ -1,4 +1,4 @@
-gem "headstart", :version => '0.4.1'
+gem "headstart", :version => '0.4.2'
 gem 'formtastic', :version => '0.9.7'
 gem 'will_paginate', :version => '2.2.2'
 
