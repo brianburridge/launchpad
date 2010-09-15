@@ -1,3 +1,6 @@
+puts "Running jammit to prep files before initial checkin"
+run "jammit"
+
 git :init
 
 file ".gitignore", <<-END
