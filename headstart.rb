@@ -1,6 +1,7 @@
-gem "headstart", :version => '0.5.3'
+gem "headstart", :version => '0.5.4'
 gem 'formtastic', :version => '0.9.7'
 gem 'will_paginate', :version => '2.2.2'
+gem 'jammit', :version => '0.5.1'
 
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/ostruct_sql_query.rb > lib/ostruct_sql_query.rb'
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/email_validation.rb > lib/email_validation.rb'
