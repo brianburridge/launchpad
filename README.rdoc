@@ -4,3 +4,4 @@ Rails templates to provide basic Rails setup automating common manual steps.
 
 == Copyright
 Copyright (c) 2010 Agile Nomads LLC. See LICENSE for details.
+
