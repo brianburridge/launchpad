@@ -1,4 +1,4 @@
-gem "headstart", :version => '0.5.4'
+gem "headstart", :version => '0.5.5'
 gem 'formtastic', :version => '0.9.7'
 gem 'will_paginate', :version => '2.2.2'
 gem 'jammit', :version => '0.5.1'
@@ -8,6 +8,7 @@ run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/email
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/url_validation.rb > lib/url_validation.rb'
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/formtastic_datepicker.rb > lib/formtastic_datepicker.rb'
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/initializers/requires.rb > config/initializers/requires.rb'
+run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/assets.yml > config/assets.yml'
 
 # Set up session store initializer
 =begin
