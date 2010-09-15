@@ -43,6 +43,7 @@ if yes?("Do you want to deploy to heroku?")
   rake("gems:specify")
 
   # Add email url for sengrid on heroku
+  contents = ""
   %w(
   config/environments/development.rb
   config/environments/production.rb
