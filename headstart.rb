@@ -1,7 +1,10 @@
-gem "headstart", :version => '0.5.5'
+gem "headstart", :version => '0.6.0'
 gem 'formtastic', :version => '0.9.7'
 gem 'will_paginate', :version => '2.2.2'
 gem 'jammit', :version => '0.5.1'
+
+plugin "enumerations_mixin", :git => "git://github.com/protocool/enumerations_mixin.git"
+plugin "ar_fixtures", :svn => "svn://topfunky.net/svn/plugins/ar_fixtures"
 
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/ostruct_sql_query.rb > lib/ostruct_sql_query.rb'
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/email_validation.rb > lib/email_validation.rb'
