@@ -5,6 +5,7 @@ gem 'jammit', :version => '0.5.1'
 
 generate(:formtastic)
 
+plugin "iso-3166-country-select", :git => "git://github.com/rails/iso-3166-country-select.git"
 plugin "enumerations_mixin", :git => "git://github.com/protocool/enumerations_mixin.git"
 plugin "ar_fixtures", :git => "git://github.com/topfunky/ar_fixtures.git"
 
