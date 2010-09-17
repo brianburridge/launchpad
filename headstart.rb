@@ -3,6 +3,8 @@ gem 'formtastic', :version => '0.9.7'
 gem 'will_paginate', :version => '2.2.2'
 gem 'jammit', :version => '0.5.1'
 
+generate(:formtastic)
+
 plugin "enumerations_mixin", :git => "git://github.com/protocool/enumerations_mixin.git"
 plugin "ar_fixtures", :git => "git://github.com/topfunky/ar_fixtures.git"
 

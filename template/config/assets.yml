@@ -13,3 +13,5 @@ stylesheets:
     - public/stylesheets/reset.css
     - public/stylesheets/style.css
     - public/stylesheets/text.css
+    - public/stylesheets/formtastic.css
+    - public/stylesheets/formtastic_changes.css
