@@ -41,9 +41,9 @@ END
     
     output = base_dir + '.#{environment}.cron.log'
     app_current_dir = base_dir + '/current'
-    app_base_dir_prod = base_dir
+    app_base_dir_prod = base_dir + "/"
     app_base_dir_prod.gsub!(/\//) {|s| "\\/" + s[1].to_s}
-    app_base_dir_staging = base_dir + '.staging'
+    app_base_dir_staging = base_dir + '.staging/'
     app_base_dir_staging.gsub!(/\//) {|s| "\\/" + s[1].to_s}
     
     using_whenever = true

@@ -4,6 +4,9 @@ gem 'will_paginate', :version => '2.2.2'
 gem 'jammit', :version => '0.5.1'
 gem 'fake_arel', :version => '0.7'
 
+# Need to load this here. Otherwise the formtastic generator throws an error about the missing assets for Jammit
+run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/assets.yml > config/assets.yml'
+
 generate(:formtastic)
 
 plugin "iso-3166-country-select", :git => "git://github.com/rails/iso-3166-country-select.git"
@@ -15,7 +18,6 @@ run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/email
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/url_validation.rb > lib/url_validation.rb'
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/formtastic_datepicker.rb > lib/formtastic_datepicker.rb'
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/initializers/requires.rb > config/initializers/requires.rb'
-run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/assets.yml > config/assets.yml'
 
 generate :headstart
 
