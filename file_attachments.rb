@@ -1,11 +1,8 @@
 if yes?("Do you want file attachments using paperclip?")
-  gem 'paperclip', :version => '2.3.0'
-  gem 'right_aws', :version => '1.10.0'
+  gem 'paperclip', :version => '2.3.1'
   
   # Setup s3 for uploading files to amazon s3
   
-
-
   #source_file = File.expand_path(File.dirname(__FILE__)) + "/config/s3.yml"
 
   access_key_id = ask("Enter Amazon S3 Access Key ID: ")

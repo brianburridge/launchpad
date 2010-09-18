@@ -2,6 +2,7 @@ gem "headstart", :version => '0.6.0'
 gem 'formtastic', :version => '0.9.7'
 gem 'will_paginate', :version => '2.2.2'
 gem 'jammit', :version => '0.5.1'
+gem 'fake_arel', :version => '0.7'
 
 generate(:formtastic)
 
@@ -15,16 +16,6 @@ run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/url_v
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/formtastic_datepicker.rb > lib/formtastic_datepicker.rb'
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/initializers/requires.rb > config/initializers/requires.rb'
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/assets.yml > config/assets.yml'
-
-# Set up session store initializer
-=begin
-initializer 'requires.rb', <<-END
-require 'formtastic_datepicker'
-require 'ostruct_sql_query'
-require 'email_validation'
-require 'url_validation'
-END
-=end
 
 generate :headstart
 
