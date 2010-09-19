@@ -18,11 +18,8 @@ if yes?("Would you like to install Google Analytics?")
     File.open(source_file, 'w') do |f2|   
      f2.puts contents
      f2.puts "Rubaidh::GoogleAnalytics.tracker_id = '#{tracker_id}'"
-     f2.puts "Rubaidh::GoogleAnalytics.local_javascript = true"
     end
   end
 
-  rake("google_analytics:updates")
-  
   puts "Google analytics was installed through a gem and added to all views in production."
 end
