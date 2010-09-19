@@ -66,7 +66,10 @@ if yes?("Do you want to deploy to heroku?")
 
 
   run "heroku create #{app_name}"
-
+  
+  run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/script/heroku_deploy > scripts/heroku_deploy'
+  run 'chmod +x scripts/heroku_deploy'
+  
   git :add => "."
   git :commit => "-am 'Prepped for heroku deploy'"
 

@@ -18,8 +18,7 @@ run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/email
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/url_validation.rb > lib/url_validation.rb'
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/formtastic_datepicker.rb > lib/formtastic_datepicker.rb'
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/initializers/requires.rb > config/initializers/requires.rb'
-run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/scripts/heroku_deploy > scripts/heroku_deploy'
-run 'chmod +x scripts/heroku_deploy'
+
 
 generate :headstart
 
