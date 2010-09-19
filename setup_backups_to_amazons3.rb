@@ -72,7 +72,7 @@ END
   end
 
   if !using_whenever
-    file "lib/tasks/gems_specify.rake",
+    file "lib/tasks/cron.rake",
     %q{
     desc "Cron for heroku"
     task :cron => :environment do
