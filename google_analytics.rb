@@ -1,6 +1,6 @@
 if yes?("Would you like to install Google Analytics?")
   # http://github.com/kennethkalmer/google_analytics
-  gem 'rubaidh-google_analytics', :lib => 'rubaidh/google_analytics', :source => 'http://gems.github.com'
+  gem 'rubaidh-google_analytics', :version => '1.1.4', :lib => 'rubaidh/google_analytics', :source => 'http://gems.github.com'
 
   # Add google analytics in production
   tracker_id = ask("Please enter your google analytics tracker id:")
