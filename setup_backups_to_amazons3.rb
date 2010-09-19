@@ -1,6 +1,5 @@
 if yes?("Do you want to backup the db to amazon s3?")
   gem "db2s3", :source => "http://gemcutter.org"
-  gem 'whenever', :lib => false, :source => 'http://gemcutter.org/'
   
   access_key_id = ask("Enter Amazon S3 Access Key ID: ")
   secret_access_key = ask("Enter Amazon S3 Secret Access Key: ")
@@ -37,6 +36,8 @@ END
   
   using_whenever = false
   if yes?("Do you want to use the whenever gem to run these backups and other crons? (Does not work on heroku) ")
+    gem 'whenever', :lib => false, :source => 'http://gemcutter.org/'
+    
     base_dir = ask("What directory will the app be stored in the server (ex. /var/www/peepnote) - no trailing slash ")
     
     output = base_dir + '.#{environment}.cron.log'
@@ -70,7 +71,7 @@ END
     
   end
 
-  if !using_whenever && yes?("Do you want to use the whenever gem to run these backups and other crons? (Does not work on heroku) ")
+  if !using_whenever
     desc "Cron for heroku"
     task :cron => :environment do
        Rake::Task['db2s3:backup:full'].invoke
