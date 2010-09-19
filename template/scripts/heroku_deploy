@@ -1,0 +1,3 @@
+jammit
+commit -m "Updated jammit assets" public/assets/*
+git push heroku
