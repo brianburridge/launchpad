@@ -72,11 +72,14 @@ END
   end
 
   if !using_whenever
+    file "lib/tasks/gems_specify.rake",
+    %q{
     desc "Cron for heroku"
     task :cron => :environment do
        Rake::Task['db2s3:backup:full'].invoke
        Rake::Task['db2s3:backup:clean'].invoke
     end
+    }
   end
   
 end
