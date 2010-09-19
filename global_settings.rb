@@ -1,6 +1,6 @@
 current_app_name = Dir.pwd.split("/").last
 
-gem "rails-settings", :lib => 'settings'
+gem "rails-settings", :version => '1.0.0', :lib => 'settings'
 
 generate(:settings_migration)
 

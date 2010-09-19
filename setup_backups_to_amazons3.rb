@@ -1,5 +1,5 @@
 if yes?("Do you want to backup the db to amazon s3?")
-  gem "db2s3", :source => "http://gemcutter.org"
+  gem "db2s3", :version => '0.3.1', :source => "http://gemcutter.org"
   
   access_key_id = ask("Enter Amazon S3 Access Key ID: ")
   secret_access_key = ask("Enter Amazon S3 Secret Access Key: ")
@@ -36,7 +36,7 @@ END
   
   using_whenever = false
   if yes?("Do you want to use the whenever gem to run these backups and other crons? (Does not work on heroku) ")
-    gem 'whenever', :lib => false, :source => 'http://gemcutter.org/'
+    gem 'whenever', :version => '0.4.1', :lib => false, :source => 'http://gemcutter.org/'
     
     base_dir = ask("What directory will the app be stored in the server (ex. /var/www/peepnote) - no trailing slash ")
     
