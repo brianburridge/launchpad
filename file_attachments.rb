@@ -1,6 +1,5 @@
 if yes?("Do you want file attachments using paperclip?")
   gem 'paperclip', :version => '2.3.0'
-  gem 'aws-s3'
   gem 'right_aws'
   
   # Setup s3 for uploading files to amazon s3
