@@ -75,9 +75,9 @@ if yes?("Do you want to deploy to heroku?")
   git :commit => "-am 'Prepped for heroku deploy'"
 
   run "git push heroku master"
-  run "heroku rake db:migrate"
   run "heroku addons:add cron:daily"
   run "heroku addons:add exceptional:basic"
   run "heroku addons:add sendgrid:free"
   run "heroku addons:add cron:daily"
+  run "heroku rake db:migrate"
 end
