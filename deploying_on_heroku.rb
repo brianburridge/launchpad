@@ -36,6 +36,7 @@ if yes?("Do you want to deploy to heroku?")
           end
           output << "rails --version 2.3.8"
           output << "formtastic --version '0.9.7' --ignore-dependencies"
+          output << "aws-s3"
           f.write output.join("\n")
           puts output.join("\n")
         end
