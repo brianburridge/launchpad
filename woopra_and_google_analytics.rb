@@ -9,7 +9,7 @@ File.open("config/initializers/global_settings.rb", 'r') do |f1|
    end  
 end
 
-File.open(source_file, 'w') do |f2|   
+File.open("config/initializers/global_settings.rb", 'w') do |f2|   
  f2.puts contents
  f2.puts "Settings.google_analytics = #{google_analytics}" if google_analytics.present?
  if woopra
