@@ -80,4 +80,5 @@ if yes?("Do you want to deploy to heroku?")
   run "heroku addons:add exceptional:basic"
   run "heroku addons:add sendgrid:free"
   run "heroku addons:add cron:daily"
+  run "heroku db:migrate"
 end
