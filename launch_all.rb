@@ -1,5 +1,6 @@
 load_template "http://github.com/bburridge/launchpad/raw/master/setup_db.rb"
 load_template "http://github.com/bburridge/launchpad/raw/master/headstart.rb"
+load_template "http://github.com/bburridge/launchpad/raw/master/use_facebook_auth.rb"
 load_template "http://github.com/bburridge/launchpad/raw/master/cleanup.rb"
 load_template "http://github.com/bburridge/launchpad/raw/master/file_attachments.rb"
 load_template "http://github.com/bburridge/launchpad/raw/master/global_settings.rb"
