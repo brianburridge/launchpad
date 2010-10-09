@@ -11,7 +11,7 @@ zendesk_code = <<-END
       url:       "#{zendesk_url}",
       tab_id:    "ask_us",
       tab_color: "black",
-      title:     "<%= Settingt.title %>",
+      title:     "<%= Settings.title %>",
       text:      "How may we help you? Please fill in details below, and we'll get back to you as soon as possible.",
       tag:       "dropbox"
     });
