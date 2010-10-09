@@ -46,25 +46,6 @@ if yes?("Do you want to deploy to heroku?")
 
   rake("gems:specify")
 
-  # Add email url for sengrid on heroku
-  contents = ""
-  %w(
-  config/environments/development.rb
-  config/environments/production.rb
-  ).each do |source_file|
-    File.open(source_file, 'r') do |f1|  
-       while line = f1.gets
-         contents += line  
-       end  
-    end
-
-    File.open(source_file, 'w') do |f2|   
-     f2.puts contents
-     f2.puts "config.action_mailer.default_url_options = { :host => 'localhost' }" if source_file.include?('development')
-     f2.puts "config.action_mailer.default_url_options = { :host => '#{app_name}.heroku.com' }" if source_file.include?('production')
-    end
-  end
-
 
   run "heroku create #{app_name}"
   
