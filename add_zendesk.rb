@@ -8,7 +8,7 @@ zendesk_code = <<-END
 <script type="text/javascript">
   if (typeof(Zenbox) !== "undefined") {
     Zenbox.init({
-      url:       "<%= zendesk_url %>",
+      url:       "#{zendesk_url}",
       tab_id:    "ask_us",
       tab_color: "black",
       title:     "<%= Settingt.title %>",
@@ -29,7 +29,7 @@ contents = ""
 File.open(source_file, 'r') do |f1|  
    while line = f1.gets
      if line.include?("$")
-       line.gsub!(/\$zendesk/, zendesk_code) if !line.nil?
+       line.gsub!(/\<!-- \$zendesk --\>/, zendesk_code) if !line.nil?
      end
      contents += line  
    end  
