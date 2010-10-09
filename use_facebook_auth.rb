@@ -1,5 +1,6 @@
 if yes?("Do you want to use Facebook for user authentication?")
   use_facebook_connect = true
+  run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/public/images/facebook_login.png > public/images/facebook_login.png'
   gem 'mini_fb', :version => '1.1.3'
 else
   use_facebook_connect = false
