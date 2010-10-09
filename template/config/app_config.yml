@@ -1,8 +1,8 @@
 development:
-  domain: $domain-development
+  domain: $domain_development
 
 test:
-  domain: $domain-test
+  domain: $domain_test
 
 production:
-  domain: $domain-production
+  domain: $domain_production
