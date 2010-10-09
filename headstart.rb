@@ -21,7 +21,7 @@ run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/in
 
 # use nifty generator to create global config vars, accessible by APP_CONFIG[:some_setting]
 # http://github.com/ryanb/nifty-generators/blob/master/rails_generators/nifty_config/USAGE
-generate nifty_config
+generate :nifty_config
 generate :headstart
 
 if yes?("Do you want to use Delayed Job?")
