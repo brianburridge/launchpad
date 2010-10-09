@@ -1,7 +1,6 @@
 if yes?("Do you want to install ZenDesk?")
 
   zendesk_url = ask("What is your ZenDesk url?")
-  source_file = File.expand_path(File.dirname(__FILE__)) + "/app/views/layouts/application.html.erb"
 
 zendesk_code = <<-END
 <script type="text/javascript" src="//assets0.zendesk.com/external/zenbox/overlay.js"></script>
@@ -24,7 +23,7 @@ else
   zendesk_code = ""
 end
 
-
+source_file = File.expand_path(File.dirname(__FILE__)) + "/app/views/layouts/application.html.erb"
 
 contents = ""
 File.open(source_file, 'r') do |f1|  
