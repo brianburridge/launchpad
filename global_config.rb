@@ -6,13 +6,11 @@ generate :nifty_config
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/app_config.yml > config/app_config.yml'
 
 
-if use_facebook_connect
-  domain_development = ask("Dev domain [localhost:3001]?")
-  domain_development = "localhost:3000" if domain_development.blank?
-  domain_test = ask("Test domain [localhost:3001]?")
-  domain_test = "localhost:3000" if domain_test.blank?
-  domain_production = ask("Prod domain?")
-end
+domain_development = ask("Dev domain [localhost:3001]?")
+domain_development = "localhost:3000" if domain_development.blank?
+domain_test = ask("Test domain [localhost:3001]?")
+domain_test = "localhost:3000" if domain_test.blank?
+domain_production = ask("Prod domain?")
 
 source_file = File.expand_path(File.dirname(__FILE__)) + "/config/app_config.yml"
 
