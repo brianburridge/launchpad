@@ -1,4 +1,4 @@
-gem "headstart", :version => '0.7.0'
+gem "headstart", :version => '0.8.0'
 gem 'formtastic', :version => '0.9.7'
 gem 'will_paginate', :version => '2.2.2'
 gem 'jammit', :version => '0.5.1'
@@ -19,7 +19,9 @@ run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/url_v
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/formtastic_datepicker.rb > lib/formtastic_datepicker.rb'
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/initializers/requires.rb > config/initializers/requires.rb'
 
-
+# use nifty generator to create global config vars, accessible by APP_CONFIG[:some_setting]
+# http://github.com/ryanb/nifty-generators/blob/master/rails_generators/nifty_config/USAGE
+generate nifty_config
 generate :headstart
 
 if yes?("Do you want to use Delayed Job?")
