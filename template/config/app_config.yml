@@ -1,0 +1,8 @@
+development:
+  domain: $domain-development
+
+test:
+  domain: $domain-test
+
+production:
+  domain: $domain-production

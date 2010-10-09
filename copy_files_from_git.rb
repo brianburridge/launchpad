@@ -9,6 +9,7 @@ run 'mkdir app/views/shared'
 config/database.yml
 config/deploy.rb
 config/environment.rb
+config/app_config.yml
 app/views/layouts/application.html.haml
 app/views/shared/_footer.html.haml
 app/views/shared/_header.html.haml
