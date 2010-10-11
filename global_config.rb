@@ -4,6 +4,7 @@ generate :nifty_config
 
 #Overide yml created by nifty_config, to use expected tokens
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/app_config.yml > config/app_config.yml'
+run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/initializers/load_app_config.rb > config/initializers/load_app_config.rb'
 
 
 domain_development = ask("Dev domain [localhost:3001]?")
