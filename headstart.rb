@@ -23,6 +23,9 @@ run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/in
 generate :headstart
 
 
+mailer_sender = ask("What is the mailer_sender? ")
+
+
 if yes?("Do you want to use Delayed Job?")
   generate :delayed_job
   delayed_job = true
@@ -37,6 +40,7 @@ File.open(source_file, 'r') do |f1|
    while line = f1.gets
      if line.include?("$")
        line.gsub!(/\$delayed_job/, delayed_job.to_s) if !line.nil?
+       line.gsub!(/\$mailer_sender/, mailer_sender.to_s) if !line.nil?
      end
      contents += line  
    end  
