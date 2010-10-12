@@ -1,6 +1,4 @@
-if yes?("Do you want to install ZenDesk?")
-
-  zendesk_url = ask("What is your ZenDesk url?")
+zendesk_url = ask("If you want to use ZenDesk and the url?")
 
 zendesk_code = <<-END
 <script type="text/javascript" src="//assets0.zendesk.com/external/zenbox/overlay.js"></script>
