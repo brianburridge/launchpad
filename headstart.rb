@@ -19,6 +19,7 @@ run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/url_v
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/formtastic_datepicker.rb > lib/formtastic_datepicker.rb'
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/initializers/requires.rb > config/initializers/requires.rb'
 run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/public/javascripts/application.js > public/javascripts/application.js'
+run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/public/images/missing.jpg > public/images/missing.jpg'
 
 
 generate :headstart
