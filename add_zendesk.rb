@@ -1,5 +1,6 @@
 zendesk_url = ask("If you want to use ZenDesk and the url?")
 
+if zendesk_url.present?
 zendesk_code = <<-END
 <script type="text/javascript" src="//assets0.zendesk.com/external/zenbox/overlay.js"></script>
 <link rel="stylesheet" type="text/css" href="//assets0.zendesk.com/external/zenbox/overlay.css" />
