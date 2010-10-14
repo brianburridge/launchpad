@@ -5,4 +5,7 @@ test:
   domain: $domain_test
 
 production:
+  domain: $domain_staging
+    
+production:
   domain: $domain_production

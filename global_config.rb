@@ -11,6 +11,7 @@ domain_development = ask("Dev domain [localhost:3001]?")
 domain_development = "localhost:3000" if domain_development.blank?
 domain_test = ask("Test domain [localhost:3001]?")
 domain_test = "localhost:3000" if domain_test.blank?
+domain_staging = ask("Staging domain?")
 domain_production = ask("Prod domain?")
 
 source_file = File.expand_path(File.dirname(__FILE__)) + "/config/app_config.yml"
@@ -19,6 +20,7 @@ contents = ""
 File.open(source_file, 'r') do |f1|  
    while line = f1.gets
      if line.include?("$")
+       line.gsub!(/\$domain_staging/, domain_staging.to_s) if !line.nil?
        line.gsub!(/\$domain_development/, domain_development.to_s) if !line.nil?
        line.gsub!(/\$domain_test/, domain_test.to_s) if !line.nil?
        line.gsub!(/\$domain_production/, domain_production.to_s) if !line.nil?
