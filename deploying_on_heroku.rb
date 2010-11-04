@@ -49,7 +49,7 @@ if yes?("Do you want to deploy to heroku?")
 
   run "heroku create #{app_name}"
   
-  run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/script/heroku_deploy > script/heroku_deploy'
+  run 'curl -L https://github.com/bburridge/launchpad/raw/master/template/script/heroku_deploy > script/heroku_deploy'
   run 'chmod +x script/heroku_deploy'
   
   git :add => "."

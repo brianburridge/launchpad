@@ -31,7 +31,7 @@ END
     end
   end
 
-  run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/schedule.rb > config/schedule.rb'
+  run 'curl -L https://github.com/bburridge/launchpad/raw/master/template/config/schedule.rb > config/schedule.rb'
   
   using_whenever = false
   if yes?("Do you want to use the whenever gem to run these backups and other crons? (Does not work on heroku) ")

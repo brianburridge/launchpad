@@ -5,7 +5,7 @@ gem 'jammit', :version => '0.5.1'
 gem 'fake_arel', :version => '0.7'
 
 # Need to load this here. Otherwise the formtastic generator throws an error about the missing assets for Jammit
-run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/assets.yml > config/assets.yml'
+run 'curl -L https://github.com/bburridge/launchpad/raw/master/template/config/assets.yml > config/assets.yml'
 
 generate(:formtastic)
 
@@ -13,13 +13,13 @@ plugin "iso-3166-country-select", :git => "git://github.com/rails/iso-3166-count
 plugin "enumerations_mixin", :git => "git://github.com/protocool/enumerations_mixin.git"
 plugin "ar_fixtures", :git => "git://github.com/topfunky/ar_fixtures.git"
 
-run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/ostruct_sql_query.rb > lib/ostruct_sql_query.rb'
-run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/email_validation.rb > lib/email_validation.rb'
-run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/url_validation.rb > lib/url_validation.rb'
-run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/lib/formtastic_datepicker.rb > lib/formtastic_datepicker.rb'
-run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/config/initializers/requires.rb > config/initializers/requires.rb'
-run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/public/javascripts/application.js > public/javascripts/application.js'
-run 'curl -L http://github.com/bburridge/launchpad/raw/master/template/public/images/missing.jpg > public/images/missing.jpg'
+run 'curl -L https://github.com/bburridge/launchpad/raw/master/template/lib/ostruct_sql_query.rb > lib/ostruct_sql_query.rb'
+run 'curl -L https://github.com/bburridge/launchpad/raw/master/template/lib/email_validation.rb > lib/email_validation.rb'
+run 'curl -L https://github.com/bburridge/launchpad/raw/master/template/lib/url_validation.rb > lib/url_validation.rb'
+run 'curl -L https://github.com/bburridge/launchpad/raw/master/template/lib/formtastic_datepicker.rb > lib/formtastic_datepicker.rb'
+run 'curl -L https://github.com/bburridge/launchpad/raw/master/template/config/initializers/requires.rb > config/initializers/requires.rb'
+run 'curl -L https://github.com/bburridge/launchpad/raw/master/template/public/javascripts/application.js > public/javascripts/application.js'
+run 'curl -L https://github.com/bburridge/launchpad/raw/master/template/public/images/missing.jpg > public/images/missing.jpg'
 
 
 generate :headstart
