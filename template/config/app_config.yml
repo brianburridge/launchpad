@@ -4,7 +4,7 @@ development:
 test:
   domain: $domain_test
 
-production:
+staging:
   domain: $domain_staging
     
 production:
